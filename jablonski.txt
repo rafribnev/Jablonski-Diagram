@@ -1,0 +1,23 @@
+STEPS TO CREATE A JABLONSKI DIAGRAM:
+1) Edit jablonski.dat: 
+    Write energies in the table. S0t is left at 0 by definition and the program is built for inputs in Hartree unit.
+    If another unit is used on the input, change the conversion factor (conv) to 1.
+    Don't edit  the columns labeled as "X".
+    
+2) Edit jablonski.gp:
+    Change the title and the y axis label as you like.
+    Edit the variables like the following: 
+                                            conv is the conversion factor, some are displayed above for you to copy.
+                                            s1c is the S1_cis energy.
+                                            s1t is the S1_trans energy.
+                                            t1 is the triplet state energy. 
+                                            deltae is the energy difference between cis and trans. 
+                                            
+   These energies will also be printed out in the png output with the unit conversion you're using.
+   If you want this disabled, comment the lines 49 to 52 (using # at the beginning of the line). 
+                                            
+                                            
+3) Open terminal (Linux) or your application exe (Windows) and write "gnuplot jablonski.gp" on the same directory as both your files (jablonski.dat and jablonski.gp)
+
+4) Your diagram should be created in the same directory as before. DONE. 
+                                                 
